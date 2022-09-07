@@ -8,7 +8,7 @@
 //
 // See "JSON and Go" for an introduction to this package:
 // https://golang.org/doc/articles/json_and_go.html
-package json
+package tjson
 
 import (
 	"bytes"
@@ -62,7 +62,7 @@ import (
 // reasons given below.
 //
 // The encoding of each struct field can be customized by the format string
-// stored under the "json" key in the struct field's tag.
+// stored under the "tjson" key in the struct field's tag.
 // The format string gives the name of the field, possibly followed by a
 // comma-separated list of options. The name may be empty in order to
 // specify options without overriding the default field name.
@@ -1256,7 +1256,7 @@ func typeFields(t reflect.Type) structFields {
 					// Ignore unexported non-embedded fields.
 					continue
 				}
-				tag := sf.Tag.Get("json")
+				tag := sf.Tag.Get("tjson")
 				if tag == "-" {
 					continue
 				}

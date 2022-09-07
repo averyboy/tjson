@@ -4,7 +4,7 @@
 
 //go:build gofuzz
 
-package json
+package tjson
 
 import (
 	"fmt"
